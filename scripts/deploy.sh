@@ -34,7 +34,7 @@ load_images() {
 
 deploy() {
   log "Applying Kubernetes manifests..."
-  kubectl apply -k "${ROOT_DIR}/k8s"
+  kubectl apply -k "${ROOT_DIR}/k8s --validate=false"
 
   log "Waiting for pods..."
   kubectl -n marketplace rollout status deployment/postgres --timeout=120s
