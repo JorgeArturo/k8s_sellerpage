@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from 'react'
-import { clearSession, getStoredUser, saveSession } from './api'
+import { clearSession, getStoredUser, saveSession, api } from '../api'
 
 const AuthContext = createContext(null)
 
